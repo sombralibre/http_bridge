@@ -1,0 +1,31 @@
+[package]
+name = "socks-brigde-client"
+version = "0.1.0"
+authors = ["Alejandro Llanes <sombra.libre@gmail.com>"]
+edition = "2018"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+panic = "abort"
+lto = true
+
+[dependencies]
+oh-my-rust = { git = "https://github.com/ylxdzsw/oh-my-rust" }
+rust-crypto = "0.2"
+rand = "0.7"
+hyper = { version = "0.14", features = ["full"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.62"
+futures = "0.3"
+getopts = "0.2"
+
+[lib]
+name = "hbslib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "hbclient"
+path = "src/main.rs"
