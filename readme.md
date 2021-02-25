@@ -1,6 +1,8 @@
 
 ## Http Bridge
 
+![](./images/http_bridge.png)
+
 ### Motivation
 
 I've wrote this program as a proof of concept to test the idea of be able to send tcp stream packets over simple http request like PUT, PATCH, POST, GET, without use a proxy way like CONNECT method. Also as a practice exercise to train my novice skill on rust language.
